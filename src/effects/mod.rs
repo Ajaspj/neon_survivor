@@ -20,3 +20,4 @@ impl Plugin for EffectsPlugin {
             );
     }
 }
+

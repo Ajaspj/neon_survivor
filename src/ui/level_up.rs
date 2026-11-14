@@ -172,3 +172,4 @@ pub fn despawn_level_up_menu(mut commands: Commands, query: Query<Entity, With<L
         commands.entity(entity).despawn();
     }
 }
+

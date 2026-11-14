@@ -150,3 +150,4 @@ pub fn spawn_enemies(
         Transform::from_xyz(spawn_pos.x, spawn_pos.y, 2.0),
     )).add_children(&[halo_entity, core_entity]);
 }
+

@@ -1,6 +1,6 @@
-use bevy::prelude::*;
 use crate::effects::particles::SpawnParticlesMessage;
 use crate::game::resources::ArenaBounds;
+use bevy::prelude::*;
 
 #[derive(Component)]
 pub struct Projectile {
@@ -48,8 +48,7 @@ pub fn handle_spawn_projectile_messages(
                 custom_size: Some(Vec2::new(26.0, 10.0)),
                 ..default()
             },
-            Transform::from_translation(msg.position.extend(4.0))
-                .with_rotation(rotation),
+            Transform::from_translation(msg.position.extend(4.0)).with_rotation(rotation),
         ));
 
         // Core high-intensity laser bolt
@@ -59,8 +58,7 @@ pub fn handle_spawn_projectile_messages(
                 custom_size: Some(Vec2::new(20.0, 5.0)),
                 ..default()
             },
-            Transform::from_translation(msg.position.extend(5.0))
-                .with_rotation(rotation),
+            Transform::from_translation(msg.position.extend(5.0)).with_rotation(rotation),
             Projectile {
                 damage: msg.damage,
                 speed: msg.speed,
@@ -115,10 +113,7 @@ pub fn update_projectiles(
     }
 }
 
-pub fn cleanup_projectiles(
-    mut commands: Commands,
-    query: Query<Entity, With<Projectile>>,
-) {
+pub fn cleanup_projectiles(mut commands: Commands, query: Query<Entity, With<Projectile>>) {
     for entity in &query {
         commands.entity(entity).despawn();
     }

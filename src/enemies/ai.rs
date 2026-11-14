@@ -73,3 +73,4 @@ pub fn update_enemy_hit_flash(
         }
     }
 }
+

@@ -20,3 +20,4 @@ impl Plugin for WeaponsPlugin {
             .add_systems(OnEnter(GameState::MainMenu), cleanup_projectiles);
     }
 }
+

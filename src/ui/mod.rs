@@ -54,3 +54,4 @@ impl Plugin for UiPlugin {
             .add_systems(OnExit(GameState::GameOver), despawn_game_over_menu);
     }
 }
+

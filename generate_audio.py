@@ -171,3 +171,4 @@ if __name__ == '__main__':
     write_wav("assets/audio/xp_pickup.wav", gen_xp())
     write_wav("assets/audio/bgm.wav", gen_bgm())
     print("All audio files successfully generated.")
+
