@@ -27,10 +27,11 @@ impl Plugin for SystemsPlugin {
                     player_enemy_collision,
                     update_xp_gems,
                     update_wave_and_timers,
+                    manage_bgm,
                 ).run_if(in_state(GameState::Playing)),
             )
-            .add_systems(OnEnter(GameState::Playing), start_bgm)
             .add_systems(OnEnter(GameState::MainMenu), stop_bgm)
+            .add_systems(OnEnter(GameState::GameOver), stop_bgm)
             .add_systems(OnEnter(GameState::GameOver), cleanup_xp_gems)
             .add_systems(OnEnter(GameState::MainMenu), cleanup_xp_gems);
     }
