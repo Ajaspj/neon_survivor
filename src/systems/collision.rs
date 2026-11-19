@@ -1,4 +1,3 @@
-use bevy::prelude::*;
 use crate::effects::particles::{SpawnFloatingTextMessage, SpawnParticlesMessage};
 use crate::enemies::Enemy;
 use crate::game::resources::{PlayerStats, Score, ScreenShake, WaveManager};
@@ -7,6 +6,7 @@ use crate::player::Player;
 use crate::systems::audio::{PlaySoundMessage, SoundType};
 use crate::systems::progression::XpGem;
 use crate::weapons::projectile::Projectile;
+use bevy::prelude::*;
 
 pub fn bullet_enemy_collision(
     mut commands: Commands,
